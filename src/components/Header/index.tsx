@@ -54,13 +54,13 @@ const Header = () => {
           </Link>
           <a
             className="hover:scale-105 hover:underline underline-offset-4 decoration-pink-400"
-            href="/lubrificantes"
+            href="https://marcante.vercel.app/lubrificantes"
           >
             Lubrificantes
           </a>
           <Link
             className="hover:scale-105 hover:underline underline-offset-4 decoration-pink-400"
-            to="/vibrador"
+            to="vibrador"
           >
             Vibradores
           </Link>
