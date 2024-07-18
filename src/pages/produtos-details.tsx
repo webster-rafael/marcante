@@ -1,22 +1,30 @@
 import { useParams } from "react-router-dom";
 import data from "../data/data.json";
 import { CiCreditCard1 } from "react-icons/ci";
+import { useCart } from "../context/useCart";
 interface Produto {
   id: number;
   title: string;
   img: string;
   price: number;
   slug: string;
+  type: string
 }
 
 export function ProdutosPage() {
   const { slug } = useParams<{ slug: string }>();
+  const { addToCart } = useCart()
 
   if (!slug) {
     return <div>Parâmetro de produto inválido</div>;
   }
 
   const products: Produto[] = data;
+
+  const handleAddToCart = ({ id, title, img, price, slug, type }: Produto) => {
+    const product: Produto = { id, title, img, price, slug, type };
+    addToCart(product); // Adiciona o produto ao carrinho
+  };
 
   const findProductBySlug = (slug: string): Produto | undefined => {
     return products.find((p: Produto) => p.slug === slug);
@@ -30,7 +38,7 @@ export function ProdutosPage() {
 
   return (
     <main className="w-full flex min-h-screen items-center max-w-[1200px] mx-auto">
-      <div className="w-full flex justify-between bg-zinc-200 rounded-lg px-4 my-10">
+      <div className="w-full flex justify-between flex-col sm:flex-row bg-zinc-200 rounded-lg px-4  sm:my-10">
         <div className="w-full h-[500px] flex items-center justify-center relative">
           <div className="border-2 border-zinc-500 rounded-lg absolute top-5 left-1">
             <img className="size-28 rounded-lg" src={produto.img} alt="" />
@@ -79,7 +87,9 @@ export function ProdutosPage() {
               </span>
             </div>
           </div>
-          <button className="w-2/4 bg-secondary text-zinc-50 h-16 rounded-lg">
+          <button 
+           onClick={() => handleAddToCart(produto)}
+          className="w-2/4 bg-secondary text-zinc-50 h-16 rounded-lg">
             Comprar Agora
           </button>
         </div>

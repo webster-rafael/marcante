@@ -19,15 +19,15 @@ const Cards = ({ id, title, img, price, slug, type }: Product) => {
   };
 
   return (
-    <div className="w-full h-[390px] flex flex-col items-center border font-roboto bg-slate-100 rounded-md shadow-md">
+    <div className="w-full h-[300px] sm:h-[390px] flex flex-col items-center border font-roboto bg-slate-100 rounded-md shadow-md">
       <Link to={`/produtos/${slug}`}>
         <img
-          className="mix-blend-multiply w-full h-[250px]"
+          className="mix-blend-multiply w-full h-52 sm:h-[250px]"
           src={img}
           alt={title}
         />
       </Link>
-      <p className="font-medium text-zinc-600">{title}</p>
+      <p className="text-sm sm:text-base font-medium text-zinc-600">{title}</p>
       <span className="text-xl text-secondary font-semibold">
         {price.toLocaleString("pt-BR", {
           style: "currency",

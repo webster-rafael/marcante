@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="h-40 my-auto bg-gradient-to-r from-primary via-secondary to-pink-700">
+    <footer className="sm:h-40 px-3 pb-2 sm:pb-0 sm:px-0 my-auto bg-gradient-to-r from-primary via-secondary to-pink-700">
       <div className="w-full max-w-[1200px] mx-auto">
         <div className="sm:flex sm:items-center sm:justify-between">
           <img src="/logo.png" className="size-24" alt="Logo" />
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-200 sm:mb-0 dark:text-gray-200">
+          <ul className="flex flex-wrap justify-center items-center mb-6 text-sm font-medium text-gray-200 sm:mb-0 dark:text-gray-200">
             <li>
               <Link to="/sobre" className="hover:underline me-4 md:me-6">
                 Sobre
@@ -28,12 +28,13 @@ const Footer = () => {
           </ul>
         </div>
         <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700 py-3" />
-        <span className="flex text-center justify-center text-sm text-gray-300 sm:text-center dark:text-gray-200">
+        <span className="flex text-center justify-center text-xs sm:text-sm text-gray-300 sm:text-center dark:text-gray-200">
           <a href="/" className="hover:underline">
           © 2023{" "}
             Webster Dev™
           </a>
-          . Todos os direitos reservados.
+          <span className="px-3">|</span>
+           Todos os direitos reservados.
           <span className="px-3">|</span>
           <span>
             Desenvolvido por{" "}

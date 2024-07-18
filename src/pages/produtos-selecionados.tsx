@@ -23,11 +23,11 @@ export default function ProdutosSelecionados() {
 
   return (
     <main className="w-full border border-black mx-auto font-roboto">
-      <section className="w-full min-h-screen max-w-[1200px] mx-auto">
+      <section className="w-full min-h-screen max-w-[1200px] mx-auto px-3 sm:px-0">
         <h1 className="text-4xl py-10 border-b uppercase font-semibold text-secondary">
           {type}
         </h1>
-        <div className="w-full h-full pb-10 pt-20 grid grid-cols-4 gap-5">
+        <div className="w-full h-full pb-10 pt-20 grid grid-cols-2 sm:grid-cols-4 gap-5">
           {products.map((produto) => (
             <Cards
             key={produto.id}
