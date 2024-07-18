@@ -91,13 +91,13 @@ export default function Cart() {
             </div>
           )}
 
-          <div className="w-[80%] flex mx-auto mt-10 justify-between">
+          <div className="w-[95%] flex mx-auto mt-10 justify-between">
             <button className="bg-violet-700 w-36 py-2 text-white rounded-lg hover:bg-violet-600 hover:scale-105">
               Finalizar Compra
             </button>
-            <div className="flex items-center sm:items-baseline gap-1 sm:text-lg font-bold uppercase text-zinc-600">
-              <span className="">Total:</span>
-              <span className="text-xl sm:text-2xl text-black">{calculateTotal()}</span>
+            <div className="flex-1 flex items-center justify-center sm:items-baseline gap-1 sm:text-lg font-bold uppercase text-zinc-600">
+              <span className="text-sm">Total:</span>
+              <span className="text-lg sm:text-2xl text-black">{calculateTotal()}</span>
             </div>
           </div>
         </div>
