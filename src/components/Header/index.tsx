@@ -52,12 +52,12 @@ const Header = () => {
           >
             Home
           </Link>
-          <a
+          <Link
             className="hover:scale-105 hover:underline underline-offset-4 decoration-pink-400"
-            href="https://marcante.vercel.app/lubrificantes"
+            to="/lubrificantes"
           >
             Lubrificantes
-          </a>
+          </Link>
           <Link
             className="hover:scale-105 hover:underline underline-offset-4 decoration-pink-400"
             to="vibrador"
