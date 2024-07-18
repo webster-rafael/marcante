@@ -4,7 +4,7 @@ import Produtos from "./components/Produtos";
 
 function App() {
   return (
-  <main className="w-full">
+  <main className="w-full overflow-x-hidden">
     <Banner />
     <Produtos />
     <Destaques />
