@@ -95,7 +95,7 @@ export default function Cart() {
             <button className="bg-violet-700 w-36 py-2 text-white rounded-lg hover:bg-violet-600 hover:scale-105">
               Finalizar Compra
             </button>
-            <div className="flex-1 flex items-center justify-center sm:items-baseline gap-1 sm:text-lg font-bold uppercase text-zinc-600">
+            <div className="flex-1 flex sm:w-full sm:justify-end items-center justify-center sm:items-baseline gap-1 sm:text-lg font-bold uppercase text-zinc-600">
               <span className="text-sm">Total:</span>
               <span className="text-lg sm:text-2xl text-black">{calculateTotal()}</span>
             </div>
