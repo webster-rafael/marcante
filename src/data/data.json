@@ -1,0 +1,108 @@
+[
+    {
+        "id": 1,
+        "title": "Gel ChanaLoka 15g",
+        "img": "/produto-1.webp",
+        "price": 39.9,
+        "slug": "gel-chanaloka",
+        "type": "lubrificantes"
+      },
+  
+      {
+        "id": 2,
+        "title": "Gel KuLoko 15g",
+        "img": "/produto-2.webp",
+        "price": 22.9,
+        "slug": "gel-kuloko",
+        "type": "lubrificantes"
+      },
+  
+      {
+        "id": 3,
+        "title": "Gel PintoLoko 15g",
+        "img": "/produto-1.webp",
+        "price": 35.9,
+        "slug": "gel-pintoloko",
+        "type": "lubrificantes"
+      },
+  
+      {
+        "id": 4,
+        "title": "Gel CherecaLoka 15g",
+        "img": "/produto-2.webp",
+        "price": 29.9,
+        "slug": "gel-cherecaloka",
+        "type": "lubrificantes"
+      },
+
+      {
+        "id": 5,
+        "title": "Lingerie Avidlove",
+        "img": "/lingerie-1.png",
+        "price": 129.9,
+        "slug": "lingerie-avid-love",
+        "type": "lingerie"
+      },
+
+      {
+        "id": 6,
+        "title": "Lingerie One Piece Teddy",
+        "img": "/lingerie-2.png",
+        "price": 29.9,
+        "slug": "lingerie-one-piece",
+        "type": "lingerie"
+      },
+
+      {
+        "id": 7,
+        "title": "Lingerie Lace Chemise",
+        "img": "/lingerie-3.png",
+        "price": 29.9,
+        "slug": "lingerie-lace-chemise",
+        "type": "lingerie"
+      },
+      {
+        "id": 8,
+        "title": "Lingerie Adome Lace",
+        "img": "/lingerie-4.png",
+        "price": 29.9,
+        "slug": "lingerie-adome-lace",
+        "type": "lingerie"
+      },
+
+      {
+        "id": 9,
+        "title": "Vibrador Ponto G em ABS",
+        "img": "/vibrador-1.avif",
+        "price": 448.9,
+        "slug": "vibrador-ponto-g",
+        "type": "vibrador"
+      },
+
+      {
+        "id": 10,
+        "title": "Vibrador Double Rider",
+        "img": "/vibrador-2.avif",
+        "price": 260,
+        "slug": "vibrador-double-rider",
+        "type": "vibrador"
+      },
+
+      {
+        "id": 11,
+        "title": "Vibrador Pretty Love",
+        "img": "/vibrador-3.avif",
+        "price": 298,
+        "slug": "vibrador-pretty-love",
+        "type": "vibrador"
+      },
+
+      {
+        "id": 12,
+        "title": "Vibrador Doppio 2.0",
+        "img": "/vibrador-4.avif",
+        "price": 424,
+        "slug": "vibrador-doppio",
+        "type": "vibrador"
+      }
+]
