@@ -27,7 +27,7 @@ const Cards = ({ id, title, img, price, slug, type }: Product) => {
           alt={title}
         />
       </Link>
-      <p className="text-sm sm:text-base font-medium text-zinc-600">{title}</p>
+      <p className="text-sm sm:text-base font-medium text-zinc-600 truncate w-full text-center px-3w">{title}</p>
       <span className="text-xl text-secondary font-semibold">
         {price.toLocaleString("pt-BR", {
           style: "currency",
