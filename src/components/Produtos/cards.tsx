@@ -19,7 +19,7 @@ const Cards = ({ id, title, img, price, slug, type }: Product) => {
   };
 
   return (
-    <div className="w-full h-[300px] sm:h-[390px] flex flex-col items-center border font-roboto bg-slate-100 rounded-md shadow-md">
+    <div className="w-full h-[320px] py-3 sm:py-0 sm:h-[390px] flex flex-col items-center border font-roboto bg-slate-100 rounded-md shadow-md">
       <Link to={`/produtos/${slug}`}>
         <img
           className="mix-blend-multiply w-full h-52 sm:h-[250px]"
@@ -36,7 +36,7 @@ const Cards = ({ id, title, img, price, slug, type }: Product) => {
       </span>
       <button
         onClick={() => handleAddToCart()}
-        className="w-44 border h-10 bg-secondary text-zinc-50 rounded-lg mt-2 hover:scale-105"
+        className="w-[90%] sm:w-44 border h-10 bg-secondary text-zinc-50 rounded-lg mt-2 hover:scale-105"
       >
         Comprar
       </button>
