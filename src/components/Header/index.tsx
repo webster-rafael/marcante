@@ -13,7 +13,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [menuVisible, setMenuVisible] = useState(false);
 
-  const { cart } = useCart()
+  const { cart } = useCart();
 
   const handleNavigation = () => {
     navigate("/carrinho");
@@ -157,7 +157,9 @@ const Header = () => {
             className="flex items-center gap-2 hover:scale-105"
           >
             <div className="relative">
-              <span className="absolute -top-1 -right-2 bg-zinc-50 size-4 rounded-full flex items-center justify-center p-2.5 text-sm font-bold text-purple-700">{cart.length}</span>
+              <span className="absolute -top-1 -right-2 bg-zinc-50 size-4 rounded-full flex items-center justify-center p-2.5 text-sm font-bold text-purple-700">
+                {cart.length}
+              </span>
               <IoCartOutline className=" size-8 sm:size-11 text-zinc-50" />
             </div>
             <span className="text-zinc-200 text-sm  leading-3 hidden sm:block">

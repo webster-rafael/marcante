@@ -4,12 +4,12 @@ import Produtos from "./components/Produtos";
 
 function App() {
   return (
-  <main className="w-full overflow-x-hidden">
-    <Banner />
-    <Produtos />
-    <Destaques />
-  </main>
-  )
+    <main className="w-full overflow-x-hidden">
+      <Banner />
+      <Produtos />
+      <Destaques />
+    </main>
+  );
 }
 
 export default App;

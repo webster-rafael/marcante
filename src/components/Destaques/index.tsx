@@ -18,7 +18,7 @@ const Destaques = () => {
         <h1 className="text-2xl sm:text-3xl text-secondary font-semibold border-b-4 border-secondary">
           Destaques
         </h1>
-        <p className="text-lg sm:text-xl text-zinc-500 flex-1 border-b-2 py-0.5">
+        <p className="text-sm sm:text-xl text-zinc-500 flex-1 border-b-2 py-0.5">
           Nosso melhor preço hoje!!
         </p>
       </div>

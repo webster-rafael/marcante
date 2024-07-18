@@ -97,7 +97,9 @@ export default function Cart() {
             </button>
             <div className="flex-1 flex sm:w-full sm:justify-end items-center justify-center sm:items-baseline gap-1 sm:text-lg font-bold uppercase text-zinc-600">
               <span className="text-sm">Total:</span>
-              <span className="text-lg sm:text-2xl text-black">{calculateTotal()}</span>
+              <span className="text-lg sm:text-2xl text-black">
+                {calculateTotal()}
+              </span>
             </div>
           </div>
         </div>
