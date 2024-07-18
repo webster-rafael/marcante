@@ -52,12 +52,12 @@ const Header = () => {
           >
             Home
           </Link>
-          <Link
+          <a
             className="hover:scale-105 hover:underline underline-offset-4 decoration-pink-400"
-            to="/lubrificantes"
+            href="/lubrificantes"
           >
             Lubrificantes
-          </Link>
+          </a>
           <Link
             className="hover:scale-105 hover:underline underline-offset-4 decoration-pink-400"
             to="/vibrador"
