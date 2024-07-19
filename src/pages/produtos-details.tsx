@@ -37,16 +37,14 @@ export function ProdutosPage() {
     return <div>Produto não encontrado</div>;
   }
 
-  const featuredProducts = products.slice(0, 3);
-
   return (
     <main className="w-full flex min-h-screen items-center max-w-[1200px] mx-auto">
-      <div className="w-full flex justify-between flex-col sm:flex-row bg-zinc-200 rounded-lg px-4  sm:my-10">
+      <div className="w-full flex justify-between flex-col sm:flex-row bg-zinc-200 h-full lg:h-[600px] rounded-lg px-4  sm:my-10">
         <h1 className="text-2xl lg:hidden text-zinc-600 font-bold font-inter uppercase text-center py-8">
           {produto.title}
         </h1>
-        <div className="w-full h-[520px] flex  justify-center relative">
-          <div className="border-2 border-zinc-500 rounded-lg absolute top-0 left-1">
+        <div className="w-full h-[520px] flex justify-center items-center relative">
+          <div className="border-2 border-zinc-500 rounded-lg absolute -top-0 lg:top-4 left-1">
             <img className="size-28 rounded-lg" src={produto.img} alt="" />
           </div>
           <img
@@ -55,24 +53,35 @@ export function ProdutosPage() {
             alt=""
           />
 
-          <div className="grid grid-cols-3 absolute bottom-0">
-            {featuredProducts.map((item) => (
-              <img className="w-full h-36 mix-blend-multiply" src={item.img} alt="" />
-            ))}
+          <div className="grid grid-cols-3 absolute -bottom-16">
+            <img
+              className="w-full h-36 mix-blend-multiply"
+              src={produto.img}
+              alt=""
+            />
+            <img
+              className="w-full h-36 mix-blend-multiply"
+              src={produto.img}
+              alt=""
+            />
+            <img
+              className="w-full h-36 mix-blend-multiply"
+              src={produto.img}
+              alt=""
+            />
           </div>
         </div>
         <div className="w-full flex flex-col justify-start py-10 px-4">
           <h1 className="text-2xl hidden lg:block text-zinc-500 font-bold font-inter uppercase text-center pt-8">
             {produto.title}
           </h1>
-          <span className="flex gap-3 items-center justify-center w-full py-4 h-20">
+          <span className="flex gap-3 items-center justify-center w-full py-4 pt-10 h-20">
             <p className="text-lg text-zinc-500">Avaliação:</p>
-          <IoStarSharp className="text-yellow-500 size-8" />
-          <IoStarSharp className="text-yellow-500 size-8" />
-          <IoStarSharp className="text-yellow-500 size-8" />
-          <IoStarSharp className="text-yellow-500 size-8" />
-          <IoStarSharp className="text-yellow-500 size-8" />
-
+            <IoStarSharp className="text-yellow-500 size-8" />
+            <IoStarSharp className="text-yellow-500 size-8" />
+            <IoStarSharp className="text-yellow-500 size-8" />
+            <IoStarSharp className="text-yellow-500 size-8" />
+            <IoStarSharp className="text-yellow-500 size-8" />
           </span>
           <div className="border-t border-zinc-300 py-3">
             <div className="">
