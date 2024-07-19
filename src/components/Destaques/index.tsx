@@ -22,7 +22,7 @@ const Destaques = () => {
           Nosso melhor preço hoje!!
         </p>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-4 h-[800px] overflow-auto sm:pr-3 pt-20 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-4 h-full  sm:pr-3 pt-20 gap-4">
         {products.map((item) => {
           return (
             <Cards

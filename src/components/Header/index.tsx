@@ -33,7 +33,7 @@ const Header = () => {
 
   return (
     <div className="w-full bg-gradient-to-r from-primary via-secondary to-pink-600">
-      <header className="w-full max-w-[1200px] flex justify-between items-center h-20  font-roboto font-medium px-4 mx-auto">
+      <header className="w-full max-w-[1200px] flex justify-between items-center h-20 font-roboto font-medium px-4 mx-auto">
         <div className="flex items-center gap-2">
           {menuVisible ? (
             <IoMdClose
@@ -46,8 +46,8 @@ const Header = () => {
               className="size-8 text-zinc-50 sm:hidden"
             />
           )}
-          <img className="size-24 sm:w-32 sm:h-32" src="/logo.png" alt="Logo" />
         </div>
+          <img className="size-24 sm:w-32 sm:h-32" src="/logo.png" alt="Logo" />
         <nav className="hidden gap-3 text-zinc-50 text-lg items-center sm:flex">
           <Link
             className="hover:scale-105 hover:underline underline-offset-4 decoration-pink-400"

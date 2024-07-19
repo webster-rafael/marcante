@@ -2,18 +2,19 @@ import { useParams } from "react-router-dom";
 import data from "../data/data.json";
 import { CiCreditCard1 } from "react-icons/ci";
 import { useCart } from "../context/useCart";
+import { IoStarSharp } from "react-icons/io5";
 interface Produto {
   id: number;
   title: string;
   img: string;
   price: number;
   slug: string;
-  type: string
+  type: string;
 }
 
 export function ProdutosPage() {
   const { slug } = useParams<{ slug: string }>();
-  const { addToCart } = useCart()
+  const { addToCart } = useCart();
 
   if (!slug) {
     return <div>Parâmetro de produto inválido</div>;
@@ -36,11 +37,16 @@ export function ProdutosPage() {
     return <div>Produto não encontrado</div>;
   }
 
+  const featuredProducts = products.slice(0, 3);
+
   return (
     <main className="w-full flex min-h-screen items-center max-w-[1200px] mx-auto">
       <div className="w-full flex justify-between flex-col sm:flex-row bg-zinc-200 rounded-lg px-4  sm:my-10">
-        <div className="w-full h-[500px] flex items-center justify-center relative">
-          <div className="border-2 border-zinc-500 rounded-lg absolute top-5 left-1">
+        <h1 className="text-2xl lg:hidden text-zinc-600 font-bold font-inter uppercase text-center py-8">
+          {produto.title}
+        </h1>
+        <div className="w-full h-[520px] flex  justify-center relative">
+          <div className="border-2 border-zinc-500 rounded-lg absolute top-0 left-1">
             <img className="size-28 rounded-lg" src={produto.img} alt="" />
           </div>
           <img
@@ -48,15 +54,27 @@ export function ProdutosPage() {
             src={produto.img}
             alt=""
           />
+
+          <div className="grid grid-cols-3 absolute bottom-0">
+            {featuredProducts.map((item) => (
+              <img className="w-full h-36 mix-blend-multiply" src={item.img} alt="" />
+            ))}
+          </div>
         </div>
         <div className="w-full flex flex-col justify-start py-10 px-4">
-          <h1 className="text-2xl font-bold font-inter uppercase">
+          <h1 className="text-2xl hidden lg:block text-zinc-500 font-bold font-inter uppercase text-center pt-8">
             {produto.title}
           </h1>
-          <p className="text-sm font-medium text-zinc-500 border-b border-zinc-300 pb-3">
-            Código: {produto.id}
-          </p>
-          <div>
+          <span className="flex gap-3 items-center justify-center w-full py-4 h-20">
+            <p className="text-lg text-zinc-500">Avaliação:</p>
+          <IoStarSharp className="text-yellow-500 size-8" />
+          <IoStarSharp className="text-yellow-500 size-8" />
+          <IoStarSharp className="text-yellow-500 size-8" />
+          <IoStarSharp className="text-yellow-500 size-8" />
+          <IoStarSharp className="text-yellow-500 size-8" />
+
+          </span>
+          <div className="border-t border-zinc-300 py-3">
             <div className="">
               <h1 className="text-2xl font-medium text-purple-700">
                 Descrição do produto
@@ -87,9 +105,10 @@ export function ProdutosPage() {
               </span>
             </div>
           </div>
-          <button 
-           onClick={() => handleAddToCart(produto)}
-          className="w-2/4 bg-secondary text-zinc-50 h-16 rounded-lg">
+          <button
+            onClick={() => handleAddToCart(produto)}
+            className="w-2/4 bg-secondary text-zinc-50 h-16 rounded-lg"
+          >
             Comprar Agora
           </button>
         </div>

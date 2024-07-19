@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <section className="w-full max-w-[1200px] mx-auto py-16">
+    <section className="w-full max-w-[1200px] mx-auto pb-10 lg:py-16">
       <div className="bg-banner bg-center h-96 w-full sm:rounded-lg relative shadow-xl">
         <div className="flex flex-col w-96 absolute left-1/3 sm:left-1/4 -translate-x-1/4 top-1/4">
           <h1 className="text-7xl text-zinc-50 font-sans font-medium leading-10">
