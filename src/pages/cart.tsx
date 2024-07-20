@@ -21,6 +21,30 @@ export default function Cart() {
       });
   };
 
+  const handleFinalizePurchase = () => {
+    const mensagem = cart
+      .map(
+        (produto) =>
+          `Estou interessado em ${produto.title} - ${produto.price.toLocaleString(
+            "pt-BR",
+            {
+              style: "currency",
+              currency: "BRL",
+            }
+          )}`
+      )
+      .join("\n");
+
+    const total = calculateTotal();
+
+    const mensagemFinal = `${mensagem}\n\nValor Total: ${total}`;
+    const whatsappUrl = `https://wa.me/5567996721069?text=${encodeURIComponent(
+      mensagemFinal
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <main className="w-full max-w-[1200px] min-h-screen mx-auto font-franklin text-zinc-50 flex flex-col gap-10">
       <section className="w-full h-full max-w-[1200px] my-10 shadow-md shadow-black/20 rounded-lg mx-auto text-black">
@@ -92,7 +116,7 @@ export default function Cart() {
           )}
 
           <div className="w-[95%] flex mx-auto mt-10 justify-between">
-            <button className="bg-violet-700 w-36 py-2 text-white rounded-lg hover:bg-violet-600 hover:scale-105">
+            <button onClick={handleFinalizePurchase} className="bg-violet-700 w-36 py-2 text-white rounded-lg hover:bg-violet-600 hover:scale-105">
               Finalizar Compra
             </button>
             <div className="flex-1 flex sm:w-full sm:justify-end items-center justify-center sm:items-baseline gap-1 sm:text-lg font-bold uppercase text-zinc-600">
