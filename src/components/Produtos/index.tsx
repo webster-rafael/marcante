@@ -20,12 +20,10 @@ const Produtos = () => {
 
   useEffect(() => {
     const handleResize = () => {
-     
       if (window.innerWidth < 768) {
-        
-        setItemsPerPage(1);
+        setItemsPerPage(2); // Define 2 itens por página para a versão mobile
       } else {
-        setItemsPerPage(4);
+        setItemsPerPage(4); // Define 4 itens por página para telas maiores
       }
     };
 
@@ -34,7 +32,6 @@ const Produtos = () => {
 
     return () => window.removeEventListener("resize", handleResize); // Limpa o listener
   }, []);
-
 
   const totalPages = Math.ceil(produtos.length / itemsPerPage);
 
@@ -51,7 +48,7 @@ const Produtos = () => {
   };
 
   return (
-    <section className="w-full max-w-[1200px] mx-auto py-0 sm:py-16 font-roboto px-5 sm:px-0">
+    <section className="w-full max-w-[1200px] mx-auto py-0 sm:py-16 font-roboto px-1 sm:px-0">
       <div className="w-full flex flex-col sm:flex-row gap-2 items-baseline sm:pb-5">
         <h1 className="text-2xl sm:text-3xl text-secondary font-semibold lg:border-b-4 border-secondary w-full text-center">
           Mais Vendidos

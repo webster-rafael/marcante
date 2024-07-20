@@ -44,9 +44,6 @@ export function ProdutosPage() {
           {produto.title}
         </h1>
         <div className="w-full h-[520px] flex justify-center items-center relative">
-          <div className="border-2 border-zinc-500 rounded-lg absolute -top-0 lg:top-4 left-1">
-            <img className="size-28 rounded-lg" src={produto.img} alt="" />
-          </div>
           <img
             className="size-96 mix-blend-multiply"
             src={produto.img}
@@ -116,7 +113,7 @@ export function ProdutosPage() {
           </div>
           <button
             onClick={() => handleAddToCart(produto)}
-            className="w-2/4 bg-secondary text-zinc-50 h-16 rounded-lg"
+            className="lg:w-2/4 bg-secondary text-zinc-50 h-16 rounded-lg "
           >
             Comprar Agora
           </button>
