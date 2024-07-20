@@ -21,11 +21,16 @@ export default function Cart() {
       });
   };
 
+  const calculateTotalItems = () => {
+    return cart.reduce((total, produto) => total + produto.quantity, 0);
+  };
+
   const handleFinalizePurchase = () => {
+    const totalItems = calculateTotalItems();
     const mensagem = cart
       .map(
         (produto) =>
-          `Estou interessado em ${produto.title} - ${produto.price.toLocaleString(
+          `Estou interessado em ${produto.quantity}x - ${produto.title} - ${produto.price.toLocaleString(
             "pt-BR",
             {
               style: "currency",
@@ -37,7 +42,7 @@ export default function Cart() {
 
     const total = calculateTotal();
 
-    const mensagemFinal = `${mensagem}\n\nValor Total: ${total}`;
+    const mensagemFinal = `${mensagem}\n\nValor Total: ${total}\nTotal de Itens: ${totalItems}`;
     const whatsappUrl = `https://wa.me/5567996721069?text=${encodeURIComponent(
       mensagemFinal
     )}`;
